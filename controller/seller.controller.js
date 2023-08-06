@@ -1,5 +1,5 @@
-const SellerCollection = require('../model/sellerModel')
 const asyncHandler = require('express-async-handler')
+const SellerCollection = require('../model/sellerModel')
 const { getSellerUsingEmail } = require('./seller/getSeller')
 const messages = require('../utils/messages')
 const { requestNewSellerAccount } = require('./admin.controller')

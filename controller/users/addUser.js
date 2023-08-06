@@ -22,6 +22,8 @@ const addNewUserToDatabase = async (data) => {
   const response = await User.create(data)
 
   if (response) return response
+
+  throw new Error('Something went wrong trying to add new user')
 }
 
 module.exports = { addNewUserToDatabase }

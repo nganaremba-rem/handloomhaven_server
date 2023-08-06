@@ -5,6 +5,7 @@ const getSellerUsingEmail = async (email) => {
     return await SellerCollection.findOne({ email })
   } catch (err) {
     console.log(err)
+    throw new Error(err)
   }
 }
 

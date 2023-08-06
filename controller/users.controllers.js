@@ -1,9 +1,9 @@
+const bcrypt = require('bcryptjs')
+const asyncHandler = require('express-async-handler')
 const messages = require('../utils/messages')
 const { addNewUserToDatabase } = require('./users/addUser')
 const { getUserByEmailOrPhone } = require('./users/getUser')
-const bcrypt = require('bcryptjs')
-const User = require('./../model/userModel')
-const asyncHandler = require('express-async-handler')
+const User = require('../model/userModel')
 
 /**
  *
@@ -56,7 +56,7 @@ const loginUser = asyncHandler(async (req, res, next) => {
   const { email_phone, password } = req.body
 
   // check if user exists
-  let user = await getUserByEmailOrPhone(email_phone)
+  const user = await getUserByEmailOrPhone(email_phone)
 
   if (!user) {
     res.status(400)

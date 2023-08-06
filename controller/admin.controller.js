@@ -1,5 +1,5 @@
-const AdminCollection = require('../model/adminModel')
 const asyncHandler = require('express-async-handler')
+const AdminCollection = require('../model/adminModel')
 const messages = require('../utils/messages')
 
 const registerNewAdmin = asyncHandler(async (req, res) => {

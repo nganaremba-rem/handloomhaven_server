@@ -1,5 +1,5 @@
-const router = require('express').Router()
 const os = require('os')
+const router = require('express').Router()
 
 router.get('/:id', (req, res) => {
   const { id } = req.params

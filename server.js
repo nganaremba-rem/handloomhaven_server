@@ -1,10 +1,12 @@
-const express = require('express')
-const app = express()
-const path = require('path')
-const cors = require('cors')
 const os = require('os')
+const path = require('path')
+const express = require('express')
+const cors = require('cors')
 const connectToDB = require('./config/db')
 
+const app = express()
+
+// eslint-disable-next-line global-require
 if (process.env.NODE_ENV !== 'production') require('dotenv').config()
 
 // Connecting to MongoDB
